@@ -1,0 +1,33 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "id.co.hanoman.config.YAMLConfig",
+      "name": "vaccount",
+      "type": "id.co.hanoman.config.YAMLConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "id.co.hanoman.config.YAMLConfig",
+      "name": "vaccount.api-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "id.co.hanoman.config.YAMLConfig",
+      "name": "vaccount.base-url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "id.co.hanoman.config.YAMLConfig",
+      "defaultValue": 0,
+      "name": "vaccount.timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "id.co.hanoman.config.YAMLConfig",
+      "name": "vaccount.user-id",
+      "type": "java.lang.String"
+    }
+  ]
+}

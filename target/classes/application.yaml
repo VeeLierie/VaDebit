@@ -1,0 +1,38 @@
+# prefix for all requests
+server:
+   port: 8094
+logging:
+   level:
+      org.springframework.web: INFO
+      id.co.hanoman.controllers: DEBUG
+      org.hibernate: ERROR
+   file: logs/spring-boot-logging.log
+spring:
+  profiles:
+    active: "dev"
+
+
+---
+
+spring:
+    profiles: prod
+name: prod-YAML
+environment: production
+vaccount:
+    userId: 9#uMMHAjkeMLc7VdjyDzDKnsjHSCO0I!
+    apiKey: g1WkhwsgXK4^5I5uh4yV7xRzzdz4t3Su
+    timeout: 20000
+    baseUrl: http://BTNVADEBIT:8081/api-v2/bank/
+    
+
+---
+
+spring:
+    profiles: dev
+name: dev-YAML
+environment: development
+vaccount:
+    userId: 9#uMMHAjkeMLc7VdjyDzDKnsjHSCO0I!
+    apiKey: g1WkhwsgXK4^5I5uh4yV7xRzzdz4t3Su
+    timeout: 20000
+    baseUrl: http://BTNVADEBIT:8081/api-v2/bank/
