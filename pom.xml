@@ -26,10 +26,12 @@
     	</pluginRepository>
 	</pluginRepositories>
 	
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -131,12 +133,22 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <fork>true</fork>
+                <executable>C:\Program Files\Java\jdk1.8.0_172\bin\javac.exe</executable>
+            </configuration>
+     	   </plugin> 
 		</plugins>
 	</build>
 </project>

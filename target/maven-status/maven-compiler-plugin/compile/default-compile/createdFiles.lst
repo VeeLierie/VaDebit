@@ -1,3 +1,4 @@
+id\co\hanoman\vaccount\model\Mutasi.class
 id\co\hanoman\vaccount\model\Response.class
 id\co\hanoman\services\TokenServiceImpl.class
 id\co\hanoman\config\SwaggerConfig.class

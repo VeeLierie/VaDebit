@@ -31,6 +31,7 @@ import id.co.hanoman.config.YAMLConfig;
 import id.co.hanoman.vaccount.model.BaseRequest;
 import id.co.hanoman.vaccount.model.ErrorResponse;
 import id.co.hanoman.vaccount.model.Lingking;
+import id.co.hanoman.vaccount.model.Mutasi;
 import id.co.hanoman.vaccount.model.Response;
 import id.co.hanoman.vaccount.model.Service;
 
@@ -92,7 +93,31 @@ public class NetClient {
 		}
 		return resCall;
 	}
+	
+	public   Object mutasi(Mutasi req) throws Exception{
+		Object resCall = null;
+		try {
+			
+			String size = req.getSize();
+			String page = req.getPage();
+			String accFrom = req.getAccNoFrom();
+			
+			String data1 =  "\"data\":{\"size\":\""+size+"\",\"page\":\""+page+"\",\"accNoFrom\":\""+accFrom+"\"}";
+			
+			data1=data1.replace(" ", "");
+			data1=data1.replace("\t", "");
+			resCall = callUrl(data1,"service",req);
+		} catch (MalformedURLException e) {
 
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+		return resCall;
+	}
+	
 	static final long ONE_MINUTE_IN_MILLIS=60000;//millisecs = 1 min
 	
 	private  static String getTimeStamp(){
